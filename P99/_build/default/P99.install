@@ -1,0 +1,8 @@
+lib: [
+  "_build/install/default/lib/P99/META"
+  "_build/install/default/lib/P99/dune-package"
+  "_build/install/default/lib/P99/opam"
+]
+bin: [
+  "_build/install/default/bin/P99"
+]

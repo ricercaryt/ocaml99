@@ -1,0 +1,23 @@
+# dune build
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Shared cache location: /Users/yulezhang/.cache/dune/db
+# Workspace root: /Users/yulezhang/workcode/ocaml/P99
+# Auto-detected concurrency: 8
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /usr/local/bin/ocamlc.opt -config > /var/folders/wn/p9r2rscj41v3hj_bkc34mwrm0000gn/T/dune_02af89_output
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl lib/nin.ml) > _build/default/lib/.P99.objs/p99__Nin.impl.d
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I lib/.P99.objs/byte -I /Users/yulezhang/.opam/default/lib/base -I /Users/yulezhang/.opam/default/lib/base/base_internalhash_types -I /Users/yulezhang/.opam/default/lib/base/caml -I /Users/yulezhang/.opam/default/lib/base/md5 -I /Users/yulezhang/.opam/default/lib/base/shadow_stdlib -I /Users/yulezhang/.opam/default/lib/base_bigstring -I /Users/yulezhang/.opam/default/lib/base_quickcheck -I /Users/yulezhang/.opam/default/lib/base_quickcheck/ppx_quickcheck/runtime -I /Users/yulezhang/.opam/default/lib/bin_prot -I /Users/yulezhang/.opam/default/lib/bin_prot/shape -I /Users/yulezhang/.opam/default/lib/core -I /Users/yulezhang/.opam/default/lib/core/base_for_tests -I /Users/yulezhang/.opam/default/lib/core/command -I /Users/yulezhang/.opam/default/lib/core/filename_base -I /Users/yulezhang/.opam/default/lib/core/heap_block -I /Users/yulezhang/.opam/default/lib/core/univ_map -I /Users/yulezhang/.opam/default/lib/core/validate -I /Users/yulezhang/.opam/default/lib/fieldslib -I /Users/yulezhang/.opam/default/lib/int_repr -I /Users/yulezhang/.opam/default/lib/jane-street-headers -I /Users/yulezhang/.opam/default/lib/parsexp -I /Users/yulezhang/.opam/default/lib/ppx_assert/runtime-lib -I /Users/yulezhang/.opam/default/lib/ppx_bench/runtime-lib -I /Users/yulezhang/.opam/default/lib/ppx_compare/runtime-lib -I /Users/yulezhang/.opam/default/lib/ppx_enumerate/runtime-lib -I /Users/yulezhang/.opam/default/lib/ppx_expect/collector -I /Users/yulezhang/.opam/default/lib/ppx_expect/common -I /Users/yulezhang/.opam/default/lib/ppx_expect/config -I /Users/yulezhang/.opam/default/lib/ppx_expect/config_types -I /Users/yulezhang/.opam/default/lib/ppx_hash/runtime-lib -I /Users/yulezhang/.opam/default/lib/ppx_here/runtime-lib -I /Users/yulezhang/.opam/default/lib/ppx_inline_test/config -I /Users/yulezhang/.opam/default/lib/ppx_inline_test/runtime-lib -I /Users/yulezhang/.opam/default/lib/ppx_log/types -I /Users/yulezhang/.opam/default/lib/ppx_module_timer/runtime -I /Users/yulezhang/.opam/default/lib/ppx_sexp_conv/runtime-lib -I /Users/yulezhang/.opam/default/lib/ppx_stable_witness/runtime -I /Users/yulezhang/.opam/default/lib/ppx_stable_witness/stable_witness -I /Users/yulezhang/.opam/default/lib/sexplib -I /Users/yulezhang/.opam/default/lib/sexplib0 -I /Users/yulezhang/.opam/default/lib/splittable_random -I /Users/yulezhang/.opam/default/lib/stdio -I /Users/yulezhang/.opam/default/lib/time_now -I /Users/yulezhang/.opam/default/lib/typerep -I /Users/yulezhang/.opam/default/lib/variantslib -no-alias-deps -opaque -open P99 -o lib/.P99.objs/byte/p99__Nin.cmo -c -impl lib/nin.ml)
+> File "lib/nin.ml", line 63, characters 34-46:
+> 63 |   List.map (fun a -> [a, a]) s |> List.flatten 
+>                                        ^^^^^^^^^^^^
+> Error: Unbound value List.flatten
+[2]
